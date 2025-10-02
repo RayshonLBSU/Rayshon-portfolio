@@ -1,0 +1,367 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2865
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+  <meta charset="UTF-8" />\
+  <meta name="viewport" content="width=device-width, initial-scale=1" />\
+  <title>Rayshon Lawrence \'95 Portfolio</title>\
+\
+  <!-- ====== Basics / SEO ====== -->\
+  <meta name="description" content="Portfolio of Rayshon Lawrence \'96 IT + HR, program analysis, cybersecurity, and projects." />\
+  <meta name="theme-color" content="#0f172a" />\
+  <link rel="preconnect" href="https://fonts.googleapis.com">\
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">\
+\
+  <!-- ====== QRCode library (tiny) ====== -->\
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>\
+\
+  <style>\
+    :root\{\
+      --bg:#0b1220; --panel:#111a2b; --muted:#9fb0d1; --text:#e7eefc; --brand:#5eead4; --accent:#93c5fd;\
+    \}\
+    *\{box-sizing:border-box\}\
+    html,body\{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)\}\
+    a\{color:var(--accent);text-decoration:none\}\
+    a:hover\{opacity:.9\}\
+\
+    /* Layout */\
+    .container\{max-width:1100px;margin:0 auto;padding:0 20px\}\
+    header\{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.7);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid rgba(255,255,255,.06)\}\
+    nav\{display:flex;align-items:center;justify-content:space-between;padding:14px 0\}\
+    .brand\{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.3px\}\
+    .brand .dot\{width:10px;height:10px;border-radius:999px;background:var(--brand);box-shadow:0 0 10px var(--brand)\}\
+    .navlinks\{display:flex;gap:18px;font-weight:600\}\
+    .navlinks a\{padding:8px 10px;border-radius:10px\}\
+    .navlinks a:hover\{background:rgba(255,255,255,.06)\}\
+\
+    /* Hero */\
+    .hero\{padding:56px 0 28px\}\
+    .grid\{display:grid;grid-template-columns:1.2fr .8fr;gap:26px\}\
+    @media (max-width:900px)\{.grid\{grid-template-columns:1fr\}.hero\{padding:36px 0\}\}\
+    .card\{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:24px\}\
+    h1\{font-size:40px;line-height:1.1;margin:0 0 10px\}\
+    p.lead\{color:var(--muted);font-size:16px;line-height:1.6\}\
+    .badges\{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px\}\
+    .badge\{background:#0f172a;border:1px solid rgba(255,255,255,.08);padding:6px 10px;border-radius:999px;font-size:12px;color:#cfe1ff\}\
+    .cta\{display:flex;gap:12px;margin-top:18px\}\
+    .btn\{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#0b1220;font-weight:700;border:none;border-radius:12px;padding:10px 14px;cursor:pointer\}\
+    .btn.secondary\{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.16)\}\
+\
+    section\{padding:42px 0\}\
+    h2\{font-size:26px;margin:0 0 6px\}\
+    .sub\{color:var(--muted);margin:0 0 16px\}\
+\
+    /* Projects */\
+    .projects\{display:grid;grid-template-columns:repeat(3,1fr);gap:16px\}\
+    @media (max-width:900px)\{.projects\{grid-template-columns:1fr\}\}\
+    .project\{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px\}\
+    .project h3\{margin:4px 0 6px;font-size:18px\}\
+    .project p\{color:var(--muted);font-size:14px\}\
+    .pill\{display:inline-block;margin-top:10px;font-size:12px;border:1px solid rgba(255,255,255,.16);padding:6px 10px;border-radius:999px\}\
+\
+    /* Resume */\
+    .resume-box\{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap\}\
+    .resume-actions\{display:flex;gap:10px\}\
+\
+    /* Contact */\
+    form\{display:grid;gap:10px;max-width:560px\}\
+    input,textarea\{width:100%;padding:12px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#0c1526;color:var(--text)\}\
+    textarea\{min-height:120px;resize:vertical\}\
+\
+    /* Footer */\
+    footer\{padding:24px 0;border-top:1px solid rgba(255,255,255,.06);color:#b6c6e8\}\
+    .footer-grid\{display:grid;grid-template-columns:1fr auto;align-items:center\}\
+    @media (max-width:700px)\{.footer-grid\{grid-template-columns:1fr\}\}\
+\
+    /* Floating Chatbot */\
+    #chat-toggle\{position:fixed;right:22px;bottom:22px;z-index:60;border-radius:999px;padding:14px 16px;font-weight:800;box-shadow:0 10px 30px rgba(0,0,0,.35)\}\
+    .chatbot\{position:fixed;right:22px;bottom:86px;width:340px;max-width:92vw;background:var(--panel);border:1px solid rgba(255,255,255,.12);border-radius:16px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.45);display:none;z-index:60\}\
+    .chat-header\{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.08)\}\
+    .chat-title\{font-weight:800\}\
+    .chat-body\{height:340px;overflow:auto;padding:12px\}\
+    .msg\{display:flex;gap:8px;margin:8px 0\}\
+    .msg .bubble\{padding:10px 12px;border-radius:12px;max-width:80%;font-size:14px;line-height:1.4\}\
+    .msg.user\{justify-content:flex-end\}\
+    .msg.user .bubble\{background:#1e293b;color:#e7eefc;border:1px solid rgba(255,255,255,.08)\}\
+    .msg.bot .bubble\{background:#0e1729;border:1px solid rgba(255,255,255,.07)\}\
+    .chat-input\{display:flex;gap:8px;padding:10px;border-top:1px solid rgba(255,255,255,.08)\}\
+    .chat-input input\{flex:1\}\
+    .faq-row\{display:flex;flex-wrap:wrap;gap:8px;padding:8px;border-top:1px dashed rgba(255,255,255,.08)\}\
+    .faq\{font-size:12px;padding:6px 10px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:#0c1526;cursor:pointer\}\
+  </style>\
+</head>\
+<body>\
+  <header>\
+    <div class="container">\
+      <nav>\
+        <div class="brand"><span class="dot"></span> Rayshon Lawrence</div>\
+        <div class="navlinks">\
+          <a href="#home">Home</a>\
+          <a href="#about">About</a>\
+          <a href="#projects">Projects</a>\
+          <a href="#resume">Resume</a>\
+          <a href="#contact">Contact</a>\
+          <a href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>\
+        </div>\
+      </nav>\
+    </div>\
+  </header>\
+\
+  <main class="container">\
+    <!-- ===== Hero / Home ===== -->\
+    <section id="home" class="hero">\
+      <div class="grid">\
+        <div class="card">\
+          <h1>Hey, I'm Rayshon \'97 IT + HR\uc0\u8209 savvy analyst building secure, human\u8209 friendly systems.</h1>\
+          <p class="lead">Senior at Bowie State (Dec 2025). Experience at FERC (travel budgeting, systems support) and GDIT (Video Ops). I'm into network/server admin, cybersecurity, and building processes that actually help people.</p>\
+          <div class="badges">\
+            <span class="badge">CompTIA Security+</span>\
+            <span class="badge">Windows Server / Hyper\uc0\u8209 V</span>\
+            <span class="badge">NIST / Gov HR & IT</span>\
+            <span class="badge">Python \'95 JS \'95 Excel</span>\
+          </div>\
+          <div class="cta">\
+            <a class="btn" href="#projects">See Projects</a>\
+            <a class="btn secondary" href="#contact">Contact Me</a>\
+          </div>\
+        </div>\
+        <div class="card">\
+          <h2>Scan to visit this portfolio</h2>\
+          <p class="sub">QR links to the live URL. Add this to your PDF resume too.</p>\
+          <div id="qrcode" style="width:100%;display:flex;align-items:center;justify-content:center;padding:18px;background:#0c1526;border-radius:12px;border:1px solid rgba(255,255,255,.08)"></div>\
+          <small style="color:#b7c7ea">URL encoded: <code id="qr-url">(resolves on load)</code></small>\
+        </div>\
+      </div>\
+    </section>\
+\
+    <!-- ===== About ===== -->\
+    <section id="about">\
+      <h2>About</h2>\
+      <p class="sub">Mixing people operations with technical execution.</p>\
+      <div class="card">\
+        <p>I bridge IT and HR/operations. I\'92ve supported travel budgets and PeopleSoft/Concur workflows at FERC, and I currently work on video operations at GDIT. In school, I focus on Windows Server 2022, Active Directory, networking, and cybersecurity frameworks (NIST SP 800\uc0\u8209 53/CSF). I like turning messy processes into clean, documented systems.</p>\
+        <div class="badges" aria-label="skills">\
+          <span class="badge">AD DS / DNS / DHCP</span>\
+          <span class="badge">Scripting & Automation</span>\
+          <span class="badge">Risk & Compliance</span>\
+          <span class="badge">Customer Support</span>\
+        </div>\
+      </div>\
+    </section>\
+\
+    <!-- ===== Projects ===== -->\
+    <section id="projects">\
+      <h2>Projects</h2>\
+      <p class="sub">Selected work. Each card links to a GitHub repo or demo.</p>\
+      <div class="projects">\
+        <article class="project">\
+          <h3><a href="https://github.com/USERNAME/hyperv-lab" target="_blank" rel="noopener">Windows Server / Hyper\uc0\u8209 V Lab</a></h3>\
+          <p>Multi\uc0\u8209 VM lab with AD DS, DHCP/DNS, GPOs, and hardened baselines. Includes step\u8209 by\u8209 step docs and screenshots.</p>\
+          <span class="pill">PowerShell \'95 Server 2022</span>\
+        </article>\
+        <article class="project">\
+          <h3><a href="https://github.com/USERNAME/data-security-plan" target="_blank" rel="noopener">Data Security Plan</a></h3>\
+          <p>Concise CIA triad overview, common threats, controls, and policy templates. Built for non\uc0\u8209 technical stakeholders.</p>\
+          <span class="pill">NIST \'95 Policy \'95 Docs</span>\
+        </article>\
+        <article class="project">\
+          <h3><a href="https://github.com/USERNAME/py-guess-the-word" target="_blank" rel="noopener">Guess\uc0\u8209 the\u8209 Word (Python)</a></h3>\
+          <p>Simple CLI word game with error\uc0\u8209 handling and testable functions. Built as a course project.</p>\
+          <span class="pill">Python</span>\
+        </article>\
+      </div>\
+    </section>\
+\
+    <!-- ===== Resume ===== -->\
+    <section id="resume">\
+      <h2>Resume</h2>\
+      <p class="sub">Live version below; downloadable PDF available.</p>\
+      <div class="card resume-box">\
+        <div>\
+          <strong>Current focus:</strong> Program/Management Analyst, IT Specialist (Customer Support), and HRIS\uc0\u8209 adjacent roles.\
+          <ul>\
+            <li>Video Operations Analyst, GDIT \'97 2025</li>\
+            <li>Management Analyst Intern, FERC \'97 2024\'962025</li>\
+            <li>B.S. Computer Technology, Bowie State \'97 Dec 2025 (target 3.7 GPA)</li>\
+          </ul>\
+        </div>\
+        <div class="resume-actions">\
+          <a class="btn" href="assets/Rayshon_Lawrence_Resume.pdf" download>Download PDF</a>\
+          <a class="btn secondary" href="assets/Rayshon_Lawrence_Resume.pdf" target="_blank">View Online</a>\
+        </div>\
+      </div>\
+      <small style="color:#b7c7ea">Place your actual PDF at <code>/assets/Rayshon_Lawrence_Resume.pdf</code>.</small>\
+    </section>\
+\
+    <!-- ===== Contact ===== -->\
+    <section id="contact">\
+      <h2>Contact</h2>\
+      <p class="sub">Have an opportunity or question? Reach out.</p>\
+      <div class="card">\
+        <form id="contact-form">\
+          <input type="text" name="name" placeholder="Your name" required />\
+          <input type="email" name="email" placeholder="you@example.com" required />\
+          <textarea name="message" placeholder="How can I help?" required></textarea>\
+          <button class="btn" type="submit">Send</button>\
+          <small id="contact-status" style="display:block;margin-top:6px;color:#b7c7ea"></small>\
+        </form>\
+        <p style="margin-top:10px;color:#9fb0d1">For a real inbox, connect Formspree or Netlify Forms later. For now this demo just validates and shows a success notice.</p>\
+      </div>\
+    </section>\
+  </main>\
+\
+  <footer>\
+    <div class="container footer-grid">\
+      <div>\'a9 <span id="year"></span> Rayshon Lawrence \'95 <a href="mailto:ray@example.com">ray@example.com</a></div>\
+      <div style="display:flex;align-items:center;gap:12px">\
+        <span>Scan:</span>\
+        <div id="qrcode-footer" style="width:90px;background:#0c1526;border-radius:8px;border:1px solid rgba(255,255,255,.08)"></div>\
+      </div>\
+    </div>\
+  </footer>\
+\
+  <!-- ===== Chatbot (rule\uc0\u8209 based JS) ===== -->\
+  <button id="chat-toggle" class="btn" aria-expanded="false">Chat with me</button>\
+  <div class="chatbot" id="chatbot" role="dialog" aria-label="Site Chatbot">\
+    <div class="chat-header">\
+      <div class="chat-title">Rayshon Bot</div>\
+      <button class="btn secondary" id="chat-close">Close</button>\
+    </div>\
+    <div class="chat-body" id="chat-body" aria-live="polite"></div>\
+    <div class="faq-row" id="faq-row"></div>\
+    <div class="chat-input">\
+      <input id="chat-input" type="text" placeholder="Ask about my skills, projects, resume\'85" />\
+      <button class="btn" id="chat-send">Send</button>\
+    </div>\
+  </div>\
+\
+  <script>\
+    // ===== Utilities =====\
+    const $ = (s, r=document) => r.querySelector(s);\
+    const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));\
+\
+    // ===== Year =====\
+    $('#year').textContent = new Date().getFullYear();\
+\
+    // ===== Smooth anchor scroll =====\
+    $$('.navlinks a').forEach(a=>\{\
+      a.addEventListener('click', e=>\{\
+        if(a.hash)\{ e.preventDefault(); document.querySelector(a.hash).scrollIntoView(\{behavior:'smooth'\}); \}\
+      \});\
+    \});\
+\
+    // ===== QR Code (uses page URL) =====\
+    function makeQR(elId)\{\
+      const url = window.location.href.split('#')[0];\
+      const el = document.getElementById(elId);\
+      el.innerHTML = '';\
+      new QRCode(el, \{ text: url, width: elId==='qrcode' ? 240 : 90, height: elId==='qrcode' ? 240 : 90, correctLevel: QRCode.CorrectLevel.H \});\
+      const u = document.getElementById('qr-url'); if(u) u.textContent = url;\
+    \}\
+    window.addEventListener('load', ()=>\{ makeQR('qrcode'); makeQR('qrcode-footer'); \});\
+\
+    // ===== Contact (demo only) =====\
+    $('#contact-form').addEventListener('submit', (e)=>\{\
+      e.preventDefault();\
+      const form = e.currentTarget;\
+      if(!form.reportValidity()) return;\
+      const data = Object.fromEntries(new FormData(form).entries());\
+      $('#contact-status').textContent = `Thanks $\{data.name\}! Your message was received (demo mode).`;\
+      form.reset();\
+    \});\
+\
+    // ===== Chatbot (simple rule-based FAQ) =====\
+    const bot = \{\
+      faqs:[\
+        'What are your top skills?',\
+        'Tell me about your GDIT role',\
+        'Show me your projects',\
+        'Do you have Security+?',\
+        'How can I contact you?'\
+      ],\
+      rules:[\
+        \{k:['skill','skills','stack','tech'], a:'My core stack: Windows Server/AD DS, DNS/DHCP, scripting (PowerShell/Python), NIST/Compliance, customer support, and budgeting/PeopleSoft/Concur.'\},\
+        \{k:['gdit','video','ops'], a:'At GDIT I support video operations: monitoring streams, triaging incidents, coordinating with teams, and documenting fixes to reduce MTTR.'\},\
+        \{k:['project','projects','github'], a:'Here are featured projects: Windows Server/Hyper\uc0\u8209 V lab, a Data Security Plan, and a Python word game. See the Projects section for GitHub links.'\},\
+        \{k:['security+','security plus','comptia'], a:'Yes \'97 CompTIA Security+ certified. It supports my cybersecurity and compliance work.'\},\
+        \{k:['contact','email','reach'], a:'Use the Contact form below or email me at ray@example.com. I typically reply within a day.'\},\
+        \{k:['resume','cv'], a:'You can view or download my resume in the Resume section. The PDF is kept up to date.'\},\
+        \{k:['experience','ferc'], a:'At FERC (OAL), I supported travel budgeting, Concur/PeopleSoft workflows, and admin support; I also built spreadsheets and process docs.'\}\
+      ]\
+    \};\
+\
+    const chatEl = $('#chatbot');\
+    const bodyEl = $('#chat-body');\
+    const faqRow = $('#faq-row');\
+    const inputEl = $('#chat-input');\
+\
+    function addMsg(text, who='bot')\{\
+      const wrap = document.createElement('div');\
+      wrap.className = `msg $\{who\}`;\
+      const b = document.createElement('div');\
+      b.className = 'bubble';\
+      b.textContent = text;\
+      wrap.appendChild(b);\
+      bodyEl.appendChild(wrap);\
+      bodyEl.scrollTop = bodyEl.scrollHeight;\
+    \}\
+\
+    function botReply(q)\{\
+      const t = q.toLowerCase();\
+      const rule = bot.rules.find(r=> r.k.some(k=> t.includes(k)) );\
+      if(rule)\{ addMsg(rule.a,'bot'); \}\
+      else\{\
+        addMsg("I'm best at questions about my skills, projects, resume, or roles. Try: \'91What are your top skills?\'92 or \'91Show me your projects\'92.", 'bot');\
+      \}\
+    \}\
+\
+    function openChat()\{ chatEl.style.display='block'; $('#chat-toggle').setAttribute('aria-expanded','true'); if(!bodyEl.dataset.boot)\{ addMsg('Hi! I\\'m Rayshon Bot. Ask me about skills, projects, my resume, or roles.'); bodyEl.dataset.boot='1'; \}\
+      faqRow.innerHTML=''; bot.faqs.forEach(f=>\{ const b=document.createElement('button'); b.className='faq'; b.textContent=f; b.addEventListener('click',()=>\{ addMsg(f,'user'); botReply(f); \}); faqRow.appendChild(b); \}); \}\
+    function closeChat()\{ chatEl.style.display='none'; $('#chat-toggle').setAttribute('aria-expanded','false'); \}\
+\
+    $('#chat-toggle').addEventListener('click', ()=> chatEl.style.display==='block'?closeChat():openChat());\
+    $('#chat-close').addEventListener('click', closeChat);\
+    $('#chat-send').addEventListener('click', ()=>\{ const v=inputEl.value.trim(); if(!v) return; addMsg(v,'user'); inputEl.value=''; botReply(v); \});\
+    inputEl.addEventListener('keydown', e=>\{ if(e.key==='Enter')\{ e.preventDefault(); $('#chat-send').click(); \} \});\
+  </script>\
+\
+  <!--\
+  =============================\
+  README (for your GitHub repo)\
+  =============================\
+  # Rayshon Lawrence \'96 Portfolio\
+\
+  A single\uc0\u8209 file portfolio (HTML/CSS/JS) with a rule\u8209 based chatbot and auto\u8209 generated QR code that points to the live URL.\
+\
+  ## Features\
+  - Sections: Home, About, Projects, Resume, Contact\
+  - Chatbot: simple JS rules; easy to extend (no external backend)\
+  - QR Code: rendered via qrcodejs using window.location.href\
+  - Responsive, accessible, lightweight\
+\
+  ## Quick Start\
+  1) Replace `USERNAME` links with your GitHub username.\
+  2) Add your resume PDF at `/assets/Rayshon_Lawrence_Resume.pdf`.\
+  3) Update email and content in the HTML.\
+  4) Commit as `index.html` to a GitHub repo.\
+  5) Enable GitHub Pages (Settings \uc0\u8594  Pages \u8594  Deploy from main root). Use the Pages URL as your final submission link.\
+\
+  ## Chatbot: How it works\
+  Edit the `bot.rules` array to add Q&A pairs. Each rule has `k` keywords and an `a` answer.\
+\
+  ## Contact Form\
+  Demo\uc0\u8209 only. To make it live, connect Formspree or Netlify Forms and replace the submit handler.\
+\
+  ## License\
+  MIT\
+  -->\
+</body>\
+</html>\
+}
