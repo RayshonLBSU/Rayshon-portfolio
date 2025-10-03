@@ -90,7 +90,7 @@
     <section id="home" class="hero">
       <div class="grid">
         <div class="card">
-          <h1>Hey, I'm Rayshon — IT + HR‑savvy analyst building secure, human‑friendly systems.</h1>
+          <h1>Hey, I'm Rayshon — IT + HR-savvy analyst building secure, human-friendly systems.</h1>
           <p class="lead">Senior at Bowie State University, <strong>graduating this fall</strong> with a <strong>3.7+ GPA</strong>. My academic track is <strong>Network Infrastructure</strong> and I’m aiming to grow into <strong>Windows Server Administration</strong>. I’m also open to expanding into other IT areas like <strong>cybersecurity</strong>, compliance, and automation.</p>
           <div class="badges">
             <span class="badge">CompTIA Security+</span>
@@ -117,14 +117,13 @@
       <h2>About</h2>
       <p class="sub">Bridging technology, business, and people operations.</p>
       <div class="card">
-        <p>I am a senior at Bowie State University, graduating in Fall 2025 with a 3.7+ GPA in Computer Technology. My concentration is <strong>Network Infrastructure</strong>, with hands‑on experience in Windows Server 2022, Active Directory, DNS/DHCP, and system hardening. I aim to launch my career in <strong>Windows Server Administration</strong> and enterprise IT support, while continuing to grow into related areas such as <strong>cybersecurity, compliance, and automation</strong>.</p>
-        <p>Beyond academics, I bring a unique blend of IT and HR experience from roles at the <strong>Federal Energy Regulatory Commission (FERC)</strong> and <strong>General Dynamics Information Technology (GDIT)</strong>. I have supported budget systems, HRIS workflows, and video operations, giving me a holistic view of both technology and organizational needs. I am motivated by solving problems that not only secure systems but also improve the human experience in technology‑driven environments.</p>
+        <p>I am a senior at Bowie State University, graduating in Fall 2025 with a 3.7+ GPA in Computer Technology. My concentration is <strong>Network Infrastructure</strong>, with hands-on experience in Windows Server 2022, Active Directory, DNS/DHCP, and system hardening. I aim to launch my career in <strong>Windows Server Administration</strong> and enterprise IT support, while continuing to grow into related areas such as <strong>cybersecurity, compliance, and automation</strong>.</p>
+        <p>Beyond academics, I bring a unique blend of IT and HR experience from roles at the <strong>Federal Energy Regulatory Commission (FERC)</strong> and <strong>General Dynamics Information Technology (GDIT)</strong>. I have supported budget systems, HRIS workflows, and video operations, giving me a holistic view of both technology and organizational needs. I am motivated by solving problems that not only secure systems but also improve the human experience in technology-driven environments.</p>
       </div>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
-      <p class="sub">Add your repos below. If a project has no link yet, it will show “Coming soon”.</p>
       <div class="projects" id="projects-list"></div>
     </section>
 
@@ -133,7 +132,7 @@
       <p class="sub">Live version below; downloadable PDF available.</p>
       <div class="card resume-box">
         <div>
-          <strong>Current focus:</strong> Program/Management Analyst, IT Specialist (Customer Support), and HRIS‑adjacent roles.
+          <strong>Current focus:</strong> Program/Management Analyst, IT Specialist (Customer Support), and HRIS-adjacent roles.
           <ul>
             <li>Video Operations Analyst, GDIT — 2025</li>
             <li>Management Analyst Intern, FERC — 2024–2025</li>
@@ -219,7 +218,7 @@
       rules:[
         {k:['skill','skills','stack','tech'], a:'Core stack: Windows Server/AD DS, DNS/DHCP, scripting (PowerShell/Python), NIST/Compliance, and budgeting/PeopleSoft/Concur.'},
         {k:['gdit','video','ops'], a:'At GDIT I support video operations: monitoring streams, triaging incidents, coordinating with teams, and documenting fixes to reduce MTTR.'},
-        {k:['project','projects','github'], a:'Featured projects are listed on this page. If a link says Coming Soon, that repo is being prepped.'},
+        {k:['project','projects','github'], a:'Featured projects are listed on this page. Each link opens the file stored in the site assets.'},
         {k:['security+','security plus','comptia'], a:'Yes — CompTIA Security+ certified.'},
         {k:['contact','email','reach'], a:'Use the Contact form, email me at Lawrencerayshon@aol.com, or message me on LinkedIn: https://www.linkedin.com/in/rayshon-t-lawrence-ii-010236251/.'},
         {k:['resume','cv'], a:'You can view or download my resume in the Resume section. The PDF is kept up to date.'},
@@ -255,44 +254,24 @@
     $('#chat-send').addEventListener('click', ()=>{ const v=inputEl.value.trim(); if(!v) return; addMsg(v,'user'); inputEl.value=''; botReply(v); });
     inputEl.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); $('#chat-send').click(); } });
 
-    // ===== Dynamic Projects: put your real repo links here
-    // If url is empty, the card shows "Coming soon" instead of a link.
-  <script>
-  const PROJECTS = [
-    {
-      title: 'Chevron Network Security (CTEC 345)',
-      desc: 'Layered defenses, Wireshark monitoring, and topologies mapped to NIST controls.',
-      url: 'assets/CHEVRON%20CTEC%20345%20GROUP%20PRESENTATION.pptx'
-    },
-    {
-      title: 'ExxonMobil Analysis (CTEC 302)',
-      desc: 'Corporate structure and decentralized network review of ExxonMobil’s global operations.',
-      url: 'assets/CTEC%20302%20-%20Exxon%20Mobil%20Final.pptx'
-    },
-    {
-      title: 'CTEC 114 Project – IT/Innovation Focus',
-      desc: 'Team presentation on emerging technology and applied IT solutions.',
-      url: 'assets/CTEC%20114%20PROJECT.pptx'
-    },
-    {
-      title: 'Supersonic Flight Sustainability Essay',
-      desc: 'Environmental, economic, and technical analysis of supersonic jetliners.',
-      url: 'assets/Argumentative%20Essay%20ENGL%20101.docx'
-    },
-    {
-      title: 'Freshman Seminar (COSC 110)',
-      desc: 'Reflections on academic growth, IT goals, and career readiness.',
-      url: 'assets/cosc%20110-%20class%201.pptx'
-    }
-  ];
+    // ===== Projects list (links point to files in /assets with spaces URL-encoded)
+    const PROJECTS = [
+      { title: 'Chevron Network Security (CTEC 345)', desc: 'Layered defenses, Wireshark monitoring, and topologies mapped to NIST controls.', url: 'assets/CHEVRON%20CTEC%20345%20GROUP%20PRESENTATION.pptx' },
+      { title: 'ExxonMobil Analysis (CTEC 302)', desc: 'Corporate structure and decentralized network review of ExxonMobil’s global operations.', url: 'assets/CTEC%20302%20-%20Exxon%20Mobil%20Final.pptx' },
+      { title: 'CTEC 114 Project – IT/Innovation Focus', desc: 'Team presentation on emerging technology and applied IT solutions.', url: 'assets/CTEC%20114%20PROJECT.pptx' },
+      { title: 'Supersonic Flight Sustainability Essay (ENGL 101)', desc: 'Environmental, economic, and technical analysis of supersonic jetliners.', url: 'assets/Argumentative%20Essay%20ENGL%20101.docx' },
+      { title: 'Freshman Seminar (COSC 110)', desc: 'Reflections on academic growth, IT goals, and career readiness.', url: 'assets/cosc%20110-%20class%201.pptx' }
+    ];
 
-  const listEl = document.getElementById('projects-list');
-  if(listEl){
-    listEl.innerHTML = PROJECTS.map(p => `
-      <article class="project">
-        <h3><a href="${p.url}" target="_blank" rel="noopener">${p.title}</a></h3>
-        <p>${p.desc}</p>
-      </article>
-    `).join('');
-  }
-</script>
+    const listEl = document.getElementById('projects-list');
+    if(listEl){
+      listEl.innerHTML = PROJECTS.map(p => `
+        <article class="project">
+          <h3><a href="${p.url}" target="_blank" rel="noopener">${p.title}</a></h3>
+          <p>${p.desc}</p>
+        </article>
+      `).join('');
+    }
+  </script>
+</body>
+</html>
