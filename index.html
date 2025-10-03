@@ -257,23 +257,42 @@
 
     // ===== Dynamic Projects: put your real repo links here
     // If url is empty, the card shows "Coming soon" instead of a link.
-    const PROJECTS = [
-      { title: 'Chevron Network Security (CTEC 345)', desc: 'Layered defenses, Wireshark monitoring, and topologies mapped to NIST controls.', url: 'assets/projects/CHEVRON_CTEC345.pdf' },
-      { title: 'ExxonMobil Analysis (CTEC 302)', desc: 'Corporate structure and decentralized network review of ExxonMobil’s global operations.', url: 'assets/projects/CTEC302_ExxonMobil_Final.pdf' },
-      { title: 'CTEC 114 Project – IT/Innovation Focus', desc: 'Team presentation on emerging technology and applied IT solutions.', url: 'assets/projects/CTEC114_Project.pdf' },
-      { title: 'Supersonic Flight Sustainability Essay', desc: 'Environmental, economic, and technical analysis of supersonic jetliners.', url: 'assets/projects/ENGL101_Supersonic_Flight_Essay.pdf' },
-      { title: 'Freshman Seminar (COSC 110)', desc: 'Reflections on academic growth, IT goals, and career readiness.', url: 'assets/projects/COSC110_Freshman_Seminar.pdf' }
-    ];
-    const listEl = document.getElementById('projects-list');
-    if(listEl){
-      listEl.innerHTML = PROJECTS.map(p => `
-        <article class="project">
-          <h3>${p.url ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>` : `${p.title}`}</h3>
-          <p>${p.desc}</p>
-          ${p.url ? '' : '<span class="pill">Coming soon</span>'}
-        </article>
-      `).join('');
+  <script>
+  const PROJECTS = [
+    {
+      title: 'Chevron Network Security (CTEC 345)',
+      desc: 'Layered defenses, Wireshark monitoring, and topologies mapped to NIST controls.',
+      url: 'assets/CHEVRON%20CTEC%20345%20GROUP%20PRESENTATION.pptx'
+    },
+    {
+      title: 'ExxonMobil Analysis (CTEC 302)',
+      desc: 'Corporate structure and decentralized network review of ExxonMobil’s global operations.',
+      url: 'assets/CTEC%20302%20-%20Exxon%20Mobil%20Final.pptx'
+    },
+    {
+      title: 'CTEC 114 Project – IT/Innovation Focus',
+      desc: 'Team presentation on emerging technology and applied IT solutions.',
+      url: 'assets/CTEC%20114%20PROJECT.pptx'
+    },
+    {
+      title: 'Supersonic Flight Sustainability Essay',
+      desc: 'Environmental, economic, and technical analysis of supersonic jetliners.',
+      url: 'assets/Argumentative%20Essay%20ENGL%20101.docx'
+    },
+    {
+      title: 'Freshman Seminar (COSC 110)',
+      desc: 'Reflections on academic growth, IT goals, and career readiness.',
+      url: 'assets/cosc%20110-%20class%201.pptx'
     }
-  </script>
-</body>
-</html>
+  ];
+
+  const listEl = document.getElementById('projects-list');
+  if(listEl){
+    listEl.innerHTML = PROJECTS.map(p => `
+      <article class="project">
+        <h3><a href="${p.url}" target="_blank" rel="noopener">${p.title}</a></h3>
+        <p>${p.desc}</p>
+      </article>
+    `).join('');
+  }
+</script>
